@@ -1,0 +1,282 @@
+h1{
+    color:#fff;
+    font-size: 55px;
+}
+
+table {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;    
+    background-size: cover;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+table.table1{
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4em;
+    font-style: normal;
+    border-collapse:separate;
+}
+.table1 thead th{
+    padding:15px;
+    color:#fff;
+    text-shadow:1px 1px 1px #568F23;
+    border:1px solid #93CE37;
+    border-bottom:3px solid #9ED929;
+    background-color:#9DD929;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.02, rgb(123,192,67)),
+        color-stop(0.51, rgb(139,198,66)),
+        color-stop(0.87, rgb(158,217,41))
+        );
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(123,192,67) 2%,
+        rgb(139,198,66) 51%,
+        rgb(158,217,41) 87%
+        );
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-radius:5px 5px 0px 0px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+.table1 thead th:empty{
+    background:transparent;
+    border:none;
+}
+.table1 tbody th{
+    color:#fff;
+    text-shadow:1px 1px 1px #568F23;
+    background-color:#9DD929;
+    border:1px solid #93CE37;
+    border-right:3px solid #9ED929;
+    padding:0px 10px;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        right top,
+        color-stop(0.02, rgb(158,217,41)),
+        color-stop(0.51, rgb(139,198,66)),
+        color-stop(0.87, rgb(123,192,67))
+        );
+    background: -moz-linear-gradient(
+        left bottom,
+        rgb(158,217,41) 2%,
+        rgb(139,198,66) 51%,
+        rgb(123,192,67) 87%
+        );
+    -moz-border-radius:5px 0px 0px 5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+
+
+.table1 tbody td{
+    padding:10px;
+    text-align:center;
+    background-color:#DEF3CA;
+    border: 2px solid #E7EFE0;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+}
+.table1 tbody .highlightDetails {
+    background: linear-gradient(to right, #DEF3CA, #11095c);  
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+.table1 tbody .highlightModifie {
+    background: linear-gradient(to right, #11095c, #024602);  
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+.table1 tbody .highlightDelete {
+    background: linear-gradient(to right, #024602, #6b1010);    
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+.table1 tbody span.check::before{
+    content : url(../../assets/images/check2.png)    
+}
+
+.table1 tfoot td{
+    padding:10px;
+    text-align:center;
+    background-color:#DEF3CA;
+    border: 2px solid #E7EFE0;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+
+    -moz-border-radius:5px 0px 0px 5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+.table1 tfoot .highlightDetails {
+  background: linear-gradient(to right, #DEF3CA, #11095c);  
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+.table1 tfoot .highlightModifie {
+  background: linear-gradient(to right, #11095c, #024602);  
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+.table1 tfoot .highlightDelete {
+  background: linear-gradient(to right, #024602, #6b1010);  
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+a.a_details {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: #11095c;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #11095c;
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+}
+.a_details:hover {
+    transition-delay: 0s, 1s;
+    color: #fff;
+    box-shadow:
+        0 0 10px #11095c,
+        0 0 20px #11095c,
+        0 0 40px #11095c,
+        0 0 80px #11095c,
+        0 0 160px #11095c;
+}
+.a_details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #1704ca;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+.a_details:hover:before {
+    width: 100%;
+}
+
+
+a.a_modifie {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: #024602;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #024602;
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+}
+.a_modifie:hover {
+    transition-delay: 0s, 1s;
+    color: #fff;
+    box-shadow:
+        0 0 10px #024602,
+        0 0 20px #024602,
+        0 0 40px #024602,
+        0 0 80px #024602,
+        0 0 160px #024602;
+}
+.a_modifie::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #068a06;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+.a_modifie:hover:before {
+    width: 100%;
+}
+
+
+
+a.a_delete {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: #6b1010;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #6b1010;
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+}
+.a_delete:hover {
+    transition-delay: 0s, 1s;
+    color: #fff;
+    box-shadow:
+        0 0 10px #6b1010,
+        0 0 20px #6b1010,
+        0 0 40px #6b1010,
+        0 0 80px #6b1010,
+        0 0 160px #6b1010;
+}
+.a_delete::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #a80707;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+.a_delete:hover:before {
+    width: 100%;
+}

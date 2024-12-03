@@ -1,0 +1,35 @@
+<div style="margin-left: 20px; margin-right: 20px;">
+  <h1>List of Tasks</h1>
+  <table class="table1">
+    <thead>
+      <tr>
+        <th>Title</th>        
+        <th>DueDate</th>
+        <th>Completed</th>
+        <th>Details</th>
+        <th>Modifie</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.Title }}</td>        
+        <td>{{ task.DueDate }}</td>
+        <td>          
+          <img 
+            [src]="'assets/images/' + (task.IsCompleted === 1 ? 'img1.png' : 'img0.png')" 
+            alt="Task Status" style="width: 30px; height: 30px;">
+        </td>
+        <td class="highlightDetails">
+          <a class="a_details" (click)="callDetailsCom(task)">Details</a>
+        </td>
+        <td class="highlightModifie">   
+          <a class="a_modifie" (click)="callUpdateCom(task)">Edit</a>
+        </td>
+        <td class="highlightDelete">
+          <a class="a_delete" (click)="deleteTask(task)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,136 @@
+<div *ngIf="task; else noTaskTemplate">
+  <form style="padding-right: 25px; padding-left: 25px;">
+  <h1>Modify</h1>
+  <h2>Task Details</h2>
+
+    <div style="margin-left: 20px; margin-right: 20px;">
+      <div style="margin-bottom: 20px;">
+        <p
+            id="valueTaskId"
+            [(ngModel)]="task.TaskId" 
+        ><strong>ID:</strong> {{ task.TaskId }}</p>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label for="title"><strong>Title</strong></label>
+        <input
+          type="text"
+          id="valueTitle"
+          [(ngModel)]="task.Title"         
+          [ngModelOptions]="{standalone: true}"
+          placeholder="Enter title"
+          required
+          style="width: 100%; padding: 10px; font-size: 16px; border-radius: 4px; border: 1px solid #ddd;"
+        />
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label for="description"><strong>Description</strong></label>
+        <textarea
+          id="valueDescription"
+          [(ngModel)]="task.Description"      
+          [ngModelOptions]="{standalone: true}"
+          placeholder="Enter description"
+          required
+          style="width: 100%; height: 100px; padding: 10px; font-size: 16px; border-radius: 4px; border: 1px solid #ddd;"
+        ></textarea>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label for="dueDate"><strong>Due Date</strong></label>
+        <input
+          type="datetime-local"
+          id="valueDueDate"
+          [(ngModel)]="task.DueDate"        
+          [ngModelOptions]="{standalone: true}"
+          required
+          style="width: 100%; padding: 10px; font-size: 16px; border-radius: 4px; border: 1px solid #ddd;"
+        />
+      </div>
+
+      <div style="margin-bottom: 20px;">
+      <p>
+          <strong>Completed:</strong>
+          <label>
+            <input 
+              type="radio" 
+              name="isCompleted" 
+              [checked]="task.IsCompleted" 
+              (change)="task.IsCompleted = 1" 
+            />
+            Yes
+          </label>
+          <label>
+            <input 
+              type="radio" 
+              name="isCompleted" 
+              [checked]="!task.IsCompleted" 
+              (change)="task.IsCompleted = 0" 
+            />
+            No
+          </label>
+        </p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between;">  
+        <a class="a_cancel" (click)="onCancelUpdate()">Cancel</a>
+        <a class="a_accept" (click)="updateTask(task)">Update Task</a>
+      </div>
+    </div>
+  </form>  
+</div>
+
+
+
+
+<ng-template #noTaskTemplate>
+
+<form  style="padding-right: 25px; padding-left: 25px;">
+  <h1>Create a new Task</h1>
+  <div style="margin-left: 20px; margin-right: 20px;">
+  <div style="margin-bottom: 20px;">
+    <label for="title"><strong>Title</strong></label>
+    <input
+      type="text"
+      id="newTitle"
+      [(ngModel)]="valueTitle"      
+      name="title"
+      placeholder="Enter title"
+      required
+      style="width: 100%; padding: 10px; font-size: 16px; border-radius: 4px; border: 1px solid #ddd;"
+    />
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <label for="description"><strong>Description</strong></label>
+    <textarea
+      id="newDescription"
+      [(ngModel)]="valueDescription"      
+      name="description"
+      placeholder="Enter description"
+      required
+      style="width: 100%; height: 100px; padding: 10px; font-size: 16px; border-radius: 4px; border: 1px solid #ddd;"
+    ></textarea>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <label for="dueDate"><strong>Due Date</strong></label>
+    <input
+      type="datetime-local"
+      id="newDueDate"
+      [(ngModel)]="valueDueDate"
+      
+      name="dueDate"
+      required
+      style="width: 100%; padding: 10px; font-size: 16px; border-radius: 4px; border: 1px solid #ddd;"
+    />
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    <a class="a_cancel" (click)="onCancel()">Cancel</a>
+    <a class="a_accept" (click)="addTask()">Accept</a>    
+  </div>
+</div>
+</form>
+
+</ng-template>

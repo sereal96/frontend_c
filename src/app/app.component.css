@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    height: auto;
+  }
+    
+.sidebar {
+  width: 200px;
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar ul li a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0px;
+}
+
+.sidebar {
+  height: 100vh;
+  background: linear-gradient(135deg, #9DD929,#6b1010);
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  height: auto;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
