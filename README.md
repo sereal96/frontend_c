@@ -1,3 +1,19 @@
+After downloaded de code in your disk, find the folder where you put it.  Install Angular 16 with:
+
+npm i @angular/cli@16.1.0
+
+##
+
+to communicate with the backend to frontend use a service with the default parameters, you need to change it if necessary
+
+![001](https://github.com/user-attachments/assets/8be86523-64b0-4432-b816-494a334a5d4a)
+
+Change the port and path if necessary.
+
+![002](https://github.com/user-attachments/assets/b6ce84c4-f38e-4f80-a680-0df1e024c3ef)
+
+##
+
 # FrontendC
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
